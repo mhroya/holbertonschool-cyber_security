@@ -1,2 +1,1 @@
-echo "82ed91ca7ab51aa2e484bd1f68b3a564" > network_security/0x02_active_reconnaissance/100-flag.txt
-
+82ed91ca7ab51aa2e484bd1f68b3a564
