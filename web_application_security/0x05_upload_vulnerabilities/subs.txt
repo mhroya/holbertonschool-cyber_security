@@ -1,0 +1,10 @@
+upload
+uploads
+uploader
+file
+files
+media
+static
+dev
+test
+admin
